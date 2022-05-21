@@ -1,0 +1,175 @@
+html {
+    background-color: black;
+}
+
+
+body #buttons {
+    display: flex;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#animateGif {
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    /*z-index: 2;*/
+}
+
+#animation video {
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 65%;
+    margin-left: 16em;
+    margin-right: 16em;
+    /*z-index: 1;*/
+}
+
+#buttons {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    /*flex-direction: column;*/
+    bottom: 3.5em;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    z-index: 10;
+    margin-left: 16em;
+}
+
+
+
+#buttons a {
+    border-radius: 100px;
+    background-color: white;
+    padding: 0.2em 0.2em 0.2em 0.2em;
+    height: 78px;
+    width: 78px;
+    margin: 0.5em 0.5em 0.5em 1em;
+    color: white;
+    font-family: Arial;
+}
+
+#buttons a img {
+    width: 80px;
+    border-radius: none;
+}
+
+#button1 img {
+    margin-left: 0.3em;
+}
+
+.testpreview {
+    z-index: 10;
+    position: absolute;
+}
+
+.testpreview:hover {
+    opacity: 0;
+    transition: all .2s ease-in-out;
+}
+
+#buttons a:hover {
+    transition: all .2s ease-in-out;
+    box-shadow: 4px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    transform: scale(1.2);
+    background-color: honeydew;
+}
+
+
+.active {
+    transition: all .2s ease-in-out;
+    box-shadow: 4px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    transform: scale(1.2);
+    background-color: honeydew;
+}
+
+.color1 {
+    transition: all .5s ease-in-out;
+    background-color: #043b6a;
+}
+
+.color2 {
+    transition: all .5s ease-in-out;
+    background-color: #7598ff;
+}
+
+.color3 {
+    transition: all .5s ease-in-out;
+    background-color: #75ffba;
+}
+
+.hidden {
+    /*display: none;*/
+    opacity: 0;
+}
+
+.visible {
+    /*display: flex;*/
+    opacity: 100;
+}
+
+.transition {
+    opacity: 100;
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+
+.fade-in {
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-out {
+    animation: fadeOut 1s;
+}
+
+.box {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 998;
+}
+
+
+.content img {
+    width: 20em;
+    z-index: 999;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
